@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>minimi · search agent</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="app">
+      <aside>
+        <div class="brand">minimi<span>✳</span></div>
+        <button id="new">+ New conversation</button>
+
+        <div class="label">Conversations</div>
+        <nav id="conversations"></nav>
+        <div class="aside-foot">A chat agent with live web search</div>
+      </aside>
+
+      <main>
+        <header>
+          <button id="menu" aria-label="Toggle conversations">☰</button>
+          <strong>Search agent</strong>
+          <span class="live"><i></i> Live web search</span>
+        </header>
+
+        <section id="messages" aria-live="polite"></section>
+
+        <form id="composer">
+          <div class="compose">
+            <textarea id="input" rows="1" placeholder="Ask anything…" aria-label="Message"></textarea>
+            <button id="send" aria-label="Send message">↑</button>
+          </div>
+          <small>Web results can be incomplete. Check linked sources for consequential decisions.</small>
+        </form>
+      </main>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
